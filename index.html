@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Country</title>
+</head>
+<body>
+    <h1>Select a Country</h1>
+    <form action="/visualize" method="post">
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            {% for c in countries %}
+                <option value="{{ c.country }}">{{ c.country }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Visualize">
+    </form>
+</body>
+</html>
